@@ -31,7 +31,7 @@ def getConfig(name: str):
 LOGGER = logging.getLogger(__name__)
 
 try:
-    if bool(getConfig('_____REMOVE_THIS_LINE_____')):
+    if bool(getConfig('')):
         logging.error('The README.md file there to be read! Exiting now!')
         exit()
 except KeyError:
@@ -65,8 +65,8 @@ if os.path.exists('authorized_chats.txt'):
             #    LOGGER.info(line.split())
             AUTHORIZED_CHATS.add(int(line.split()[0]))
 try:
-    BOT_TOKEN = getConfig('BOT_TOKEN')
-    parent_id = getConfig('GDRIVE_FOLDER_ID')
+    BOT_TOKEN = getConfig('1299862557:AAGq18lWeIc2QBfkrA5lYVuL10ni1j3YVJM')
+    parent_id = getConfig('17yDFkSd69695Pj-r2PVACBKR9nRa6pe_')
     DOWNLOAD_DIR = getConfig('DOWNLOAD_DIR')
     if DOWNLOAD_DIR[-1] != '/' or DOWNLOAD_DIR[-1] != '\\':
         DOWNLOAD_DIR = DOWNLOAD_DIR + '/'
@@ -74,8 +74,8 @@ try:
     OWNER_ID = int(getConfig('OWNER_ID'))
     AUTO_DELETE_MESSAGE_DURATION = int(getConfig('AUTO_DELETE_MESSAGE_DURATION'))
     USER_SESSION_STRING = getConfig('USER_SESSION_STRING')
-    TELEGRAM_API = getConfig('TELEGRAM_API')
-    TELEGRAM_HASH = getConfig('TELEGRAM_HASH')
+    TELEGRAM_API = getConfig('353173')
+    TELEGRAM_HASH = getConfig('ab5bff041e8114cb078b4d6208aa1bc7')
 except KeyError as e:
     LOGGER.error("One or more env variables missing! Exiting now")
     exit(1)
